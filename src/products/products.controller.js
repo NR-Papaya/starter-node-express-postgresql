@@ -1,6 +1,7 @@
 const productsService = require("./products.service");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 
+
 async function productExists(req, res, next) {
 	const product = await productsService.read(req.params.productId);
 	if (product) {
